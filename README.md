@@ -1,59 +1,59 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<div align="center">
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# 🍨 Ice Cream Shop POS Backend API
+### Backend Engineer Intern • Practical Exam Submission
 
-## About Laravel
+[![Laravel Status](https://img.shields.io/badge/Laravel-11.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
+[![MySQL Database](https://img.shields.io/badge/MySQL-8.x-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](https://www.mysql.com)
+[![Sanctum Auth](https://img.shields.io/badge/Sanctum-Token_Auth-00FFFF?style=for-the-badge&logo=php&logoColor=black)](https://laravel.com/docs/sanctum)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+*A secure RESTful API backend built for point-of-sale operations, inventory tracking, customer loyalty records, and strict Role-Based Access Control (RBAC).*
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+</div>
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🚀 Project Overview
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+This project serves as a comprehensive backend solution for an Ice Cream Shop Point of Sale (POS) system. It manages core entities (**Users**, **Items**, and **Customers**) with secure authentication via Laravel Sanctum and explicit permission guardrails tailored for different staff positions.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## 🛡️ Role-Based Access Control (RBAC) Matrix
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+| Role | Email | Password | Permissions & Capabilities |
+| :--- | :--- | :--- | :--- |
+| **Owner** | `owner@icecream.com` | `owner123` | **Full Control:** Create, Read, Update, and Delete on both Inventory and Customers. |
+| **Manager** | `manager@icecream.com` | `manager123` | **Operations Lead:** Create, Read, and Update records (**No Delete permissions**). |
+| **Cashier** | `cashier@icecream.com` | `cashier123` | **Front-end Staff:** Full Customer CRUD; View & Edit existing Inventory items only. |
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 🛠️ Tech Stack & Architecture
 
-## Contributing
+* **Framework:** Laravel 11 (PHP)
+* **Database:** MySQL (Structured Entity Tables)
+* **Authentication:** Laravel Sanctum (Bearer Token Authentication)
+* **Data Seeding:** Custom Database Seeder (`IceCreamShopSeeder`)
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+---
 
-## Code of Conduct
+## 📦 Database Schema Design
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+The database consists of three primary business entity tables along with Laravel framework system tables:
+1. **`users`**: Manages staff logins, passwords, and access roles (`owner`, `manager`, `cashier`).
+2. **`items`**: Stores the ice cream product catalog (flavors, categories, pricing, stock levels).
+3. **`customers`**: Stores client contact records and reward loyalty points.
 
-## Security Vulnerabilities
+---
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+## ⚙️ Local Setup Instructions
 
-## License
+Follow these steps to set up and run the project locally on your machine:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+### 1. Clone & Install Dependencies
+```bash
+git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+cd your-repo-name
+composer install
