@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🍨 Ice Cream Shop POS Backend API
+# 🍨 Ice Cream Shop Backend
 ### Backend Engineer Intern • Practical Exam Submission
 
 [![Laravel Status](https://img.shields.io/badge/Laravel-11.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
