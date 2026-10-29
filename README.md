@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🍨 Ice Cream Shop Backend 
+# 🍨 Ice Cream Shop POS Backend API
 ### Backend Engineer Intern • Practical Exam Submission
 
 [![Laravel Status](https://img.shields.io/badge/Laravel-11.x-FF2D20?style=for-the-badge&logo=laravel&logoColor=white)](https://laravel.com)
@@ -16,7 +16,7 @@
 
 ## 🚀 Project Overview
 
-This project serves as a comprehensive backend solution for an Ice Cream Shop Point of Sale (POS) system. It manages core entities (**Users**, **Items**, and **Customers**) with secure authentication via Laravel Sanctum and explicit permission guardrails tailored for different staff positions.
+This project serves as a comprehensive backend solution for an Ice Cream Shop Point of Sale (POS) system. It manages core entities (**Users**, **Items**, and **Customers**) with secure token authentication via Laravel Sanctum and explicit permission guardrails tailored for different staff positions.
 
 ---
 
@@ -42,6 +42,23 @@ This project serves as a comprehensive backend solution for an Ice Cream Shop Po
 ## 📦 Database Schema Design
 
 The database consists of three primary business entity tables along with Laravel framework system tables:
-1. **`users`**: Manages staff logins, passwords, and access roles (`owner`, `manager`, `cashier`).
+1. **`users`**: Manages staff logins, emails, hashed passwords, and access roles (`owner`, `manager`, `cashier`).
 2. **`items`**: Stores the ice cream product catalog (flavors, categories, pricing, stock levels).
-3. **`customers`**: Stores client contact records and reward loyalty points.
+3. **`customers`**: Stores client contact records (names, phone numbers) and reward loyalty points.
+
+---
+
+## ⚙️ Step-by-Step Setup Guide for Reviewers
+
+Follow these instructions to set up, run, and test the project locally from scratch:
+
+### Prerequisites
+* **PHP** (Version 8.2 or higher)
+* **Composer** (PHP Package Manager)
+* **MySQL** (Local server via XAMPP, Laragon, MySQL Workbench, etc.)
+* **Postman** (Recommended for testing API endpoints)
+
+### Step 1: Clone the Repository
+```bash
+git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
+cd your-repo-name
