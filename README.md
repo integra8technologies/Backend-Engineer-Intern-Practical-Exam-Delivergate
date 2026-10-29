@@ -45,15 +45,3 @@ The database consists of three primary business entity tables along with Laravel
 1. **`users`**: Manages staff logins, passwords, and access roles (`owner`, `manager`, `cashier`).
 2. **`items`**: Stores the ice cream product catalog (flavors, categories, pricing, stock levels).
 3. **`customers`**: Stores client contact records and reward loyalty points.
-
----
-
-## ⚙️ Local Setup Instructions
-
-Follow these steps to set up and run the project locally on your machine:
-
-### 1. Clone & Install Dependencies
-```bash
-git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-cd your-repo-name
-composer install
